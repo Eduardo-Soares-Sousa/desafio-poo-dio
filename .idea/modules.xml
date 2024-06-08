@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Desafio-POO-DIO.iml" filepath="$PROJECT_DIR$/.idea/Desafio-POO-DIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesafioPOO/DesafioPOO.iml" filepath="$PROJECT_DIR$/DesafioPOO/DesafioPOO.iml" />
+    </modules>
+  </component>
+</project>
