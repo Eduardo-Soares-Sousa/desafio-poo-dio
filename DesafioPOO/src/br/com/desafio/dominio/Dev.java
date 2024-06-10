@@ -50,6 +50,28 @@ public class Dev {
         return this.conteudosConcluidos.stream().mapToDouble(Conteudo::calcularXp).sum();
     }
 
+    public void exibirDadosDev() {
+        if(!conteudosInscristos.isEmpty()){
+            System.out.println("Dados do dev: " + getNome());
+            System.out.println("Conteúdos inscritos:");
+            for(Conteudo conteudo : conteudosInscristos){
+                System.out.println(conteudo.getTitulo());
+                System.out.println(conteudo.getDescricao());
+            }
+        }else{
+            System.out.println("Você não está inscrito em nenhum curso!");
+        }
+
+        if(!conteudosConcluidos.isEmpty()){
+            System.out.println("Conteúdos concluídos:");
+            for(Conteudo conteudo : conteudosConcluidos){
+                System.out.println(conteudo.getTitulo());
+            }
+        }else{
+            System.out.println("Você não concluiu o conteúdo!");
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
