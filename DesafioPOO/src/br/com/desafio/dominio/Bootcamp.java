@@ -54,6 +54,42 @@ public class Bootcamp {
         this.conteudos = conteudos;
     }
 
+    public void exibirAlunosBootcamp() {
+        System.out.println("Alunos inscritos no bootcamp");
+        if(!getDevInscritos().isEmpty()){
+            for(Dev dev : devInscritos){
+                System.out.println(dev.getNome());
+            }
+        }else{
+            System.out.println("Não há devs inscritos nesse bootcamp!");
+        }
+    }
+
+    public void exibirCursosBootcamp() {
+        System.out.println("Cursos do bootcamp");
+        if(!getConteudos().isEmpty()){
+            for(Conteudo conteudo : conteudos){
+                if(conteudo instanceof Curso){
+                    System.out.println(conteudo.getTitulo());
+                }
+            }
+        }else{
+            System.out.println("Não há cursos nesse bootcamp!");
+        }
+    }
+
+    public void removerDevNome(String nome) {
+        if(!getDevInscritos().isEmpty()){
+            for(Dev dev : devInscritos){
+                if(dev.getNome().equalsIgnoreCase(nome)){
+                    devInscritos.remove(dev);
+                }
+            }
+        }else{
+            System.out.println("Não há devs inscritos nesse bootcamp!");
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
