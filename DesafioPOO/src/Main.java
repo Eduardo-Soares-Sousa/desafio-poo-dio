@@ -32,6 +32,7 @@ public class Main {
         bootcamp.setDescricao("Descrição: Bootcamp Java Developer");
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(curso3);
         bootcamp.getConteudos().add(mentoria);
 
         Dev devEduardo = new Dev();
@@ -58,5 +59,19 @@ public class Main {
         System.out.println("Conteúdos Concluidos de João: " + devJoao.getConteudosConcluidos());
         System.out.println("XP: " + devJoao.calcularTotalXP());
 
+        System.out.println("\n-------------------------------------\n");
+
+        bootcamp.exibirAlunosBootcamp();
+        System.out.println("-------");
+        bootcamp.exibirCursosBootcamp();
+        System.out.println("-------");
+
+        bootcamp.removerDevNome("joao");
+        bootcamp.exibirAlunosBootcamp();
+
+        System.out.println("-------");
+        devEduardo.exibirDadosDev();
+        System.out.println("-------");
+        devJoao.exibirDadosDev();
     }
 }
